@@ -100,3 +100,11 @@ button {
     background-color: #0f0f0f98;
   }
 }
+
+.logo.vite:hover {
+  filter: drop-shadow(0 0 2em #747bff);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafb);
+}

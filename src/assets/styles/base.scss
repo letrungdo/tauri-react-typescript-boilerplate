@@ -1,0 +1,67 @@
+html {
+  font-size: 9px;
+  @media screen and (min-width: 768px) {
+    font-size: 8px;
+  }
+  @media screen and (min-width: 960px) {
+    font-size: 9px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 10px;
+  }
+}
+html,
+body {
+  overflow: hidden;
+  position: relative;
+}
+* {
+  /* Only allow scroll gestures */
+  touch-action: pan-x pan-y;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  outline-color: transparent;
+  outline-style: none;
+  outline-width: 0;
+}
+img {
+  -drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.text {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.text-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden !important;
+  white-space: nowrap;
+  // display: -webkit-box;
+  // -webkit-line-clamp: 1;
+  // -webkit-box-orient: vertical;
+  // &.three-lines {
+  //   -webkit-line-clamp: 3;
+  // }
+}
+.button {
+  &:active {
+    opacity: 0.7;
+  }
+  cursor: pointer;
+}
+.hide-scroll-bar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}

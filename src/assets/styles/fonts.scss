@@ -1,0 +1,34 @@
+/* NotoSansCJKjp for JP */
+@font-face {
+  font-family: "NotoSansCJKjp";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Noto Sans CJK JP Regular"), local("NotoSansCJKjp-Regular"),
+    local("NotoSansJP-Regular"),
+    url("../fonts/NotoSansCJKjp-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "NotoSansCJKjp";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Noto Sans CJK JP Medium"), local("NotoSansCJKjp-Medium"),
+    local("NotoSansJP-Medium"),
+    url("../fonts/NotoSansCJKjp-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "NotoSansCJKjp";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Noto Sans CJK JP Bold"), local("NotoSansCJKjp-Bold"),
+    local("NotoSansJP-Bold"),
+    url("../fonts/NotoSansCJKjp-Bold.woff2") format("woff2");
+}
+/* Open Sans for Latin */
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+0020-007F;
+  src: local("Inter Regular"), local("Inter-Regular"),
+    url("../fonts/Inter-Regular.woff2") format("woff2");
+}

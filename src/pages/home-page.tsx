@@ -1,9 +1,9 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import reactLogo from "@assets/react.svg";
+import Layout from "@components/Layout";
 import { invoke } from "@tauri-apps/api/tauri";
-import "./App.css";
+import { useState } from "react";
 
-function App() {
+function HomePage() {
   const [greetMsg, setGreetMsg] = useState("");
   const [name, setName] = useState("");
 
@@ -13,7 +13,8 @@ function App() {
   }
 
   return (
-    <div className="container">
+    <Layout>
+      <div className="container">
       <h1>Welcome to Tauri!</h1>
 
       <div className="row">
@@ -44,7 +45,8 @@ function App() {
       </div>
       <p>{greetMsg}</p>
     </div>
+    </Layout>
   );
 }
 
-export default App;
+export default HomePage;
