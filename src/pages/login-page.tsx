@@ -8,7 +8,6 @@ import {
   Text
 } from "@chakra-ui/react";
 import useLogin from "@hooks/user/useLogin";
-import jsCookies from "js-cookie";
 
 const LoginPage = () => {
   const {

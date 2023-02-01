@@ -3,6 +3,11 @@ import Layout from "@components/Layout";
 import { invoke } from "@tauri-apps/api/tauri";
 import { useState } from "react";
 
+import { Button } from "@chakra-ui/react";
+import { routePath } from "@routes/path";
+import { WebviewWindow } from '@tauri-apps/api/window';
+
+
 function HomePage() {
   const [greetMsg, setGreetMsg] = useState("");
   const [name, setName] = useState("");
@@ -44,6 +49,21 @@ function HomePage() {
         </div>
       </div>
       <p>{greetMsg}</p>
+      <Button onClick={() => {
+        const webview = new WebviewWindow(routePath.Login, {
+          url: routePath.Login,
+          x: 100,
+          y: 100
+        })
+        // since the webview window is created asynchronously,
+        // Tauri emits the `tauri://created` and `tauri://error` to notify you of the creation response
+        webview.once('tauri://created', function () {
+          // webview window successfully created
+        })
+        webview.once('tauri://error', function (e) {
+          // an error occurred during webview window creation
+        });
+      }}>Open login in new window</Button>
     </div>
     </Layout>
   );
